@@ -3,20 +3,6 @@ r"""Generate plots from the digital pathology VLM review workbooks.
 Install the dependencies:
     python -m pip install numpy pandas matplotlib openpyxl
 
-Generate all four plots directly from the deposited extraction workbook:
-    python plotcode.py --extraction-workbook VLM_Extracted_Data.xlsx --output-dir figures
-
-Extraction_Clean supplies the task categories, model names, numeric metrics,
-and study characteristics. Blank or nonnumeric metric cells are treated as
-missing. The explicit N/A labels in the accessibility fields are retained.
-The optional --review-workbook argument uses a separate Task_Distribution
-and Benchmark_Matrix for the task distribution, heatmap, and violin plots.
-
-Outputs are PNG and PDF versions of the task distribution, benchmark heatmap,
-metric violin plots, and study overview. The source named
-fig5_parameter_vs_performance.py generates the study overview. These sources
-do not include a parameter-versus-performance bubble plot. Output names
-describe the plots independently of manuscript numbering.
 """
 
 from __future__ import annotations
